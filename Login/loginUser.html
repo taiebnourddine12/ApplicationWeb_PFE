@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <title>EleoneTech - Login</title>
+  <!-- CORE CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link rel='stylesheet' href='./Style.css'>
+</head>
+<body>
+
+
+  <div id="login-page" class="row">
+    <div class="card-panel">
+      <form method="post" action="login.php" name="login" class="login-form" onsubmit='return verif()' >
+	  <!--Mode User/Admin-->
+		<div class="modeLogin">
+			<ul class='ul_tabs'>
+				<li class="active"><a href="#" onclick="Utilisateur()">Utilisateur</a>
+					<span class="line"></span>
+				</li>
+				<li>
+					<a href="loginAdmin.html" onclick="Administrateur()">Administrateur</a>
+					<span class="line"></span>
+				</li>
+			</ul>
+      </div>
+	  
+		<center><img src="eleonetech.png" class="logo"></center>
+ 
+		<!--Username-->
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input class="validate" placeholder="username" name="Username" type="text">
+          </div>
+        </div>
+		<!--Password-->
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input placeholder="password" name="Password" type="password">
+		  </div>
+		</div>
+		
+		
+		<!--Login-->
+        <div class="row">
+          <div class="input-field col s12">
+		  <center>
+		  <input type="submit" class="btn" value="Login" onSubmit='return verif()'>
+		  </center>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+		
+       
+	   <!--javascript-->
+ <script type="text/javascript">
+      function verif()
+      {
+        if(document.login.Username.value=="")
+        {
+            alert("le champ Username ne doit pas etre vide ");
+            return false;
+        }
+        if(document.login.Password.value=="")
+        {
+            alert("le champ Password ne doit pas etre vide ");
+            return false;
+        }
+        
+
+      }
+  </script>
+
+
+  
+</body>
+
+</html>

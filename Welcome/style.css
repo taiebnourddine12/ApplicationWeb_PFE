@@ -1,0 +1,53 @@
+body{
+    background-color: #fff;
+    font-family: sans-serif;
+}
+.splash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: open;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.splash .img{
+    background-image: url("./eleonetech.png");
+    height: 72px;
+    width: 72px;
+    z-index: 9;
+}
+.splash::after, .splash::before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    animation-duration: 1s;
+}
+.splash::after{
+    left: 30vw;
+    animation-delay: 200ms;
+}
+.splash::before{
+    left: 0;
+    animation-delay: 1s;
+}
+@keyframes open{
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+

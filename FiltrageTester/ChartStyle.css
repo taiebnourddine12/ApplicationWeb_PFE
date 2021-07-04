@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+
+
+    .container {
+	width: 70%;
+	height: 250px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    }
+
+    .gauge {
+      width: 90%;
+      height: 250px;
+    }
+	

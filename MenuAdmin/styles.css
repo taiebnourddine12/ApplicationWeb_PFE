@@ -1,0 +1,74 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#F1F1F1;
+  overflow: hidden;
+  font-family: Helvetica;
+}
+.card {
+  display: grid;
+  grid-template-columns: 170px;
+  grid-template-rows: 170px 80px 10px;
+  grid-template-areas: "image" "text";
+  border-radius: 20px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:15px;
+}
+.card-image {
+  grid-area: image;
+  background: url("img/manager.png");
+  
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 15px;
+  text-align:center;
+  color:#1976d2;
+}
+
+.card-text h2 {
+  font-size:18px;
+  text-align:center;
+  font-family: Helvetica;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+/*card2*/
+.card-image.card2 {
+  background: url("img/consultation.png");
+  background-size: cover;
+}
+
+/*card3*/
+.card-image.card3 {
+  background: url("img/website.png");
+  background-size: cover;
+}
+
+/*card4*/
+.card-image.card4 {
+  background: url("img/logout.png");
+  background-size: cover;
+}
+
+/*card5*/
+.card-image.card5 {
+  background: url("img/tester.png");
+  background-size: cover;
+}

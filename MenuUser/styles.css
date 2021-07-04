@@ -1,0 +1,59 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#F1F1F1;
+  overflow: hidden;
+}
+.card {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 200px 80px 10px;
+  grid-template-areas: "image" "text";
+  border-radius: 20px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:15px;
+}
+
+
+.card-text {
+  grid-area: text;
+  margin: 15px;
+  text-align:center;
+  color:#1976d2;
+}
+
+.card-text h2 {
+  font-size:18px;
+  text-align:center;
+  font-family: Helvetica;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+/*card1*/
+.card-image.card1 {
+  background: url("img/consultation.png");
+  background-size: cover;
+}
+/*card2*/
+.card-image.card2 {
+  background: url("img/website.png");
+  background-size: cover;
+}
+
+/*card3*/
+.card-image.card3 {
+  background: url("img/logout.png");
+  background-size: cover;
+}

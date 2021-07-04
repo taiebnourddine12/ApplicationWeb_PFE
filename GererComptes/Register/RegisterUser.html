@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+  <title>EleoneTech - Register</title>
+  <!-- CORE CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='./Style.css'>
+</head>
+<body>
+  <div id="login-page" class="row">
+    <div class="card-panel">
+      <form method="post" action="registerUser.php" name="Register" class="login-form" onsubmit='return verif()' >
+		
+		<!--Mode User/Admin-->
+		<div class="modeLogin">
+			<ul class='ul_tabs'>
+				<li class="active"><a href="#">Utilisateur</a>
+					<span class="line"></span>
+				</li>
+				<li>
+					<a href="RegisterAdmin.html">Administrateur</a>
+					<span class="line"></span>
+				</li>
+			</ul>
+      </div>
+		
+		<!--LOGO-->
+		<center><img src="eleonetech.png" class="logo"></center>
+		
+		<!--Matricule-->
+		<div class="row margin">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">fingerprint</i>
+            <input placeholder="Matricule" name="Matricule" type="number">
+		  </div>
+		</div>
+		
+		<!--Username-->
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input class="validate" placeholder="Username" name="Username" type="text">
+          </div>
+        </div>
+		
+		<!--Password-->
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input placeholder="Password" name="Password" type="password">
+		  </div>
+		</div>
+		
+		<!--Register-->
+        <div class="row">
+          <div class="input-field col s12">
+		  <input type="submit" class="btn waves-effect waves-light col s12" value="Register" onSubmit='return verif()'>
+          </div>
+        </div>
+		<!--LIST-->
+		<a href="../listUser.php" class="float">
+			<h1 class="fa fa-list my-float"></h1>
+		</a>
+      </form>
+
+    </div>
+  </div>
+		
+       
+<!--javascript-->
+<script type="text/javascript">
+      function verif()
+      {
+		if(document.Register.Matricule.value=="")
+        {
+            alert("Le champ Matricule vide ");
+            return false;
+        }
+        if(document.Register.Username.value=="")
+        {
+            alert("le champ user ne doit pas etre vide ");
+            return false;
+        }
+        if(document.Register.Password.value=="")
+        {
+            alert("le champ password ne doit pas etre vide ");
+            return false;
+        }
+        
+
+      }
+  </script>
+ 
+
+</style>
+
+
+  
+</body>
+
+</html>

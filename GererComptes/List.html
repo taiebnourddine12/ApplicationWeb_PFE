@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EleoneTech - Gerer Comptes</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+<form class="list" name="list" action="" method="POST" onsubmit="">
+	<input type="radio" id="user" name="db" value="user" onClick="checkRadio(this)"> 
+	<label for="user">Utilisateur</label>
+	<input type="radio" id="admin" name="db" value="admin" onClick="checkRadio(this)" > 
+	<label for="admin">Administrateur</label>   </br>
+	<button type="submit" id="valid">Show</button>
+	
+	<a href="./Register/RegisterUser.html" class="float">
+		<h1 class="fa fa-plus my-float"></h1>
+	</a>
+	
+	<a href="../MenuAdmin/MenuAdmin.html" class="home">
+		<h1 class="fa fa-home my-home"></h1>
+	</a>
+</form>    
+
+<script src="js.js"></script>
+</body>
+</html>
